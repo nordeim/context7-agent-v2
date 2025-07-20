@@ -1,3 +1,63 @@
+<think>
+Looking at the error, the issue is clear: `name 'os' is not defined` in the `create_mcp_server` function in `cli.py`. This is happening because the `os` module is being used without being imported.
+
+Let me examine the code:
+
+In `cli.py`, line 86-96 in the `create_mcp_server` function:
+```python
+return MCPServerStdio(
+    command=npx_path,
+    args=["-y", "@upstash/context7-mcp@latest"],
+    env={
+        "PATH": os.environ.get("PATH", ""),  # <-- Here os is used but not imported
+        "NODE_OPTIONS": "--max-old-space-size=512"
+    }
+)
+```
+
+The `os` module is used in the `env` parameter but `import os` is missing at the top of the file. Looking at the imports in cli.py, I can see:
+
+```python
+import anyio
+from rich.console import Console
+from rich.table import Table
+from rich.panel import Panel
+from rich.prompt import Prompt
+from rich.live import Live
+from rich.syntax import Syntax
+from rich.text import Text
+import subprocess
+import shutil
+```
+
+Indeed, `import os` is missing. This is the only error that needs to be fixed. The rest of the code looks correct.
+
+Let me verify this is the only place where `os` is used in cli.py by checking:
+- Line 89: `os.environ.get("PATH", "")` - this is the only usage
+
+The fix is simple: add `import os` at the top of cli.py.
+
+I'll also double-check that this change won't affect any other functionality. Since `os` is a standard library module and is only used for accessing environment variables, this should be a safe addition that won't break anything.
+
+Let me also check if there are any other similar issues in the other files, but looking at them:
+- agent.py has `import os` at the top
+- config.py has `import os` at the top
+- history.py has `import os` at the top
+
+So the issue is isolated to cli.py.
+</think>
+
+## Analysis and Fix
+
+After carefully analyzing the error, I've identified the root cause: the `os` module is being used in `cli.py` without being imported. This occurs in the `create_mcp_server` function where `os.environ.get("PATH", "")` is called.
+
+## Solution
+
+The fix is straightforward - we need to add the missing `import os` statement at the top of the `cli.py` file.
+
+## Updated File
+
+```python
 import anyio
 import os  # Added missing import
 from rich.console import Console
@@ -212,3 +272,10 @@ if __name__ == "__main__":
         anyio.run(main)
     except KeyboardInterrupt:
         console.print("\n[bold magenta]Goodbye! 👋[/bold magenta]")
+```
+
+## Summary
+
+The issue has been resolved by adding the missing `import os` statement at the top of the `cli.py` file. This was the only change required to fix the `name 'os' is not defined` error. The fix is minimal and targeted, ensuring no other functionality is affected.
+
+The application should now start successfully without the MCP server creation error.

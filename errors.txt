@@ -1,0 +1,27 @@
+$ python3 -m src.cli
+INFO:src.agent:Agent initialized successfully
+...
+Welcome to Context7 Agent! (Theme: cyberpunk)
+
+/help            Show this help screen
+/theme THEME     Switch theme (cyberpunk, ocean, forest, sunset)
+/preview N       Preview document N (from results)
+/bookmark N      Bookmark document N
+/analytics       Show search analytics
+/history         Show chat history
+/exit            Exit the agent
+
+✅ Node.js v22.16.0 found
+Starting Context7 MCP server...
+✅ Context7 MCP server connected successfully
+You: official pydantic-ai documentation on agent mode with OpenAI as LLM and Context7 as MCP tool calling
+    *
+ERROR:src.agent:Chat error: MCP server is not running: MCPServerStdio(command='/usr/bin/npx', args=['-y', '@upstash/context7-mcp@latest'], tool_prefix=None)
+╭────────────────────── Agent ────────────────
+│ I encountered an error: MCP server is not running: MCPServerStdio(command='/usr/bin/npx', args=['-y', '@upstash/context7-mcp@latest'], tool_prefix=None). Please check your configuration and try again.                                 │
+╰─────────────────────────────────────────────
+INFO:src.agent:History saved successfully
+You: /exit
+Goodbye!
+🔄 Shutting down gracefully...
+

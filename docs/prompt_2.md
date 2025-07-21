@@ -61,3 +61,14 @@ This rigorous process will ensure that the final report is not merely a superfic
 
 Now create the comprehensive report.
 
+---
+awesome job! now use the same rigorous and meticulous approach to carefully and systematically review the attached troubleshooting guide and programming cheat-sheet and then to carefully compare them against the actual codebase shared earlier and your detailed code review with architecture description report. then create a detailed comprehensive report on your assessment on the guide documents and also the compliance of the codebase with these documents. please put on your deep-thinking hat to deeply and thoroughly explore how you want to re-imagine your assessment report on highlighting any conflict or deviation of the actual codebase from these guide documents, meaning pointing out any inconsistencies in the guide documents based on your own independent online research of the actual library source codes and documentation , also any non-compliance of the actual codebase against these documents. Use at least 4000 words for your comprehensive assessment report in markdown format.
+
+---
+awesome job! now do a due diligence to conduct an extensive online research on the actual libraries' source code and their official documentations to validate your finding below. then create a complete updated document `Troubleshooting_Pydantic-AI_and-MCP-Server_Issues_uodated.md` that accurately corrects the issue. make your updated document correct, accurate and complete standalone (replacement) copy without any reference to the earlier version. I will only keep your updated troubleshooting guide.
+
+You will apply the same rigorous and systematic methodology to analyze the provided troubleshooting and guidance documents. Perform a meticulous, line-by-line comparison of these guides against the `context7-agent-v2` codebase and your previous architectural assessment. The objective is to validate the accuracy of the guidance, identify any discrepancies between the documentation and the implementation, and produce a comprehensive report on the overall alignment and quality of both the code and its supporting documents. My analysis will be thorough, aiming to provide deep insights into the project's coherence and correctness.
+
+---
+You will conduct due diligence to perform the necessary research to validate your previous finding and then construct a complete, corrected, and standalone replacement for the troubleshooting guide.
+

@@ -18,8 +18,8 @@ logger = logging.getLogger(__name__)
 
 class Context7Agent:
     """
-    Production-ready AI agent implementing Context7 MCP integration.
-    Uses pydantic-ai 0.4.2+ with proper error handling and non-empty system prompts.
+    Production-ready AI agent implementing the exact pattern from working examples.
+    Uses pydantic-ai 0.4.2+ with proper MCP server integration.
     """
 
     def __init__(self, config: Optional[Config] = None):
@@ -38,32 +38,16 @@ class Context7Agent:
             provider=self.provider,
         )
 
-        # Ensure system prompt is never empty
-        system_prompt = config.rag_system_prompt or """
-        You are a specialized AI research assistant named Context7.
-        
-        Your sole purpose is to provide answers by exclusively using information 
-        retrieved from the Context7 knowledge base. You are forbidden from using 
-        your own internal knowledge.
-        
-        When a user asks a question, you must:
-        1. Use the search tool to query the Context7 knowledge base
-        2. Synthesize your answer exclusively from retrieved documents
-        3. Be concise and directly address the user's question
-        4. If no relevant information is found, clearly state that
-        
-        Format your responses in clear, readable markdown.
-        """
-
         # MCP server - exactly as shown in working examples
         self.mcp_server = self.create_mcp_server()
 
-        # Agent with correct model string format and non-empty system prompt
+        # Agent - using the simplified string format directly
+        # The key fix: using "openai:gpt-4o-mini" format or similar
         model_string = f"openai:{config.openai_model}"
         self.agent = Agent(
             model_string,
             mcp_servers=[self.mcp_server],
-            system_prompt=system_prompt
+            system_prompt=config.rag_system_prompt
         )
 
         # History manager
@@ -79,7 +63,7 @@ class Context7Agent:
             raise
 
     def create_mcp_server(self) -> MCPServerStdio:
-        """Create MCP server with proper configuration."""
+        """Create MCP server exactly as shown in working examples."""
         import shutil
         
         npx_path = shutil.which("npx")
@@ -97,7 +81,7 @@ class Context7Agent:
     async def chat(
         self, user_text: str, message_history: Optional[List[Dict]] = None
     ) -> str:
-        """Process user query with MCP tools."""
+        """Process user query using the exact pattern from working examples."""
         message_history = message_history or []
         
         try:
@@ -113,7 +97,7 @@ class Context7Agent:
     async def chat_stream(
         self, user_text: str, message_history: Optional[List[Dict]] = None
     ):
-        """Stream chat response with proper MCP server lifecycle."""
+        """Stream chat response using the exact pattern from working examples."""
         message_history = message_history or []
         
         try:

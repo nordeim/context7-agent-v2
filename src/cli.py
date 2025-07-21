@@ -16,6 +16,9 @@ from .config import Config
 from .themes import get_theme, get_ascii_art, get_animation_frames
 from .utils import format_error, format_success
 
+# Add missing import
+from datetime import datetime
+
 console = Console()
 
 def print_ascii_art(theme: str):

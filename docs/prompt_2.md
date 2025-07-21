@@ -1,0 +1,42 @@
+You are an elite AI coding assistant known for your rigorous and meticulous analysis and careful planning before execution. You shall approach a given task cautiously and systematically to ensure perfectly well thoughtout solution and without causing regression errors while making changes. Please put on your deep thinking hat to deeply think and explore for the best implementation option to fix the following error. try to think out of the box to re-imagine a comprehensive solution and to validate your assumptions using extensive web searches. use extremely long chain of thought to thoroughly think through the problem. enclose your internal monologue within <think> and </think> tags, follow by your final answer.
+Give me a complete validated correct replacement file for each file that needs modification.
+
+---
+please carefully validate your latest version of src/agent.py against the *original* version in the diff output below. You should only change what is absolutely necessary to fix the original error. Making more changes will introduce unnecessary regression errors.
+
+---
+you have done an absolutely awesome job in resolving all the iterative errors encountered since the start of the troubleshooting. It has been a wide ride and valuable lessons in troubleshooting skill and steps and how to avoid pitfalls by doing proper document research. Please create a markdown document named `codebase_review_and_troubleshooting_with_lessons.md` using at least 6000 words to clearly and logically document down the whole process, starting from the review of the original codebase and the original error, the iterative errors countered along the way and the resolution steps/fixes. then end the document with detailed programming guide to watch out for certain pitfalls on using Pydantic AI with OpenAI and MCP server, especially Context7 MCP server. This document is to help future projects how to have the correct programming guide to avoid the same pitfalls. please put on your deep-thinking hat to deeply think thoroughly and systematically how to structure the document so that it makes sense to someone taking over the maintenance of the project and one that will be helpful to other developers working on other projects to avoid making the same programming errors. Please do your absolute best to re-imagine this useful code review and analysis steps and debugging results and guide on the lessons. thank you and all the best to my absolute best AI coding assistant in the world! 
+
+---
+awesome job with the expanded document! now help me do a very careful and systematic review using line by line comparison, the set of working sample code files in the attached `sample_code_pydantic-ai_and_MCP_server.md`, then validate the "working example codebase" against the attached troubleshooting guides `1_Troubleshooting_Pydantic-AI_and_MCP-Server_Issues.md` and `1_PYDANTIC_AI_TROUBLESHOOTING.md` (condensed) version. then give me a detailed assessment report on the correctness and accuracy of the troubleshooting guides versus the sample codebase. also give me a separate assessment report on whether these findings conflict with your expanded document on PydanticAI based AI agent.
+
+Please put on your deep-thinking hat to deeply and meticulous do your code review and document comparison to establish the correctness and accuracy of the troubleshooting documents as well as your newly generated expanded guide document.
+
+---
+awesome review and analysis! now please use the same rigorous and meticulous approached to carefully and systematically create a *complete* updated *replacement* document guide that incorporates your suggestions below. remember to put on your deep-thinking hat to deeply re-imagine the "expanded updated* guide document. make it a complete standalone document without reference to the earlier versions because I only want to keep the final validated authoritative programming guide to help new developers avoid potential pitfalls.
+
+---
+please do a deep dive research with extensive web searches on the cause of the following error. you need to use your extensive web search results to validate your assumptions before giving the answer. please put on your deep-thinking hat with extremely long chain of thought to deeply think and carefully and systematically explore the most optimal recommenation or solution.
+
+---
+awesome job! now the app works beautifully with out error. Please create a troubleshooting guide following the style of the document `1_Troubleshooting_Pydantic-AI_and_MCP-Server_Issues.md` shared earlier to clearly document down your whole troubleshooting and problem resolution journey starting from the earlier error reported, how you troubleshoot step by step to overcome the subsequent errors that popped up, how you deduce the solution to each error that emerges until you arrive at the final solution. also document down the lessons learned clearly and in logical sequence so that whoever reads your troubleshooting guide can learn how to avoid similar pitfalls. make the guide useful to help other developers doing similar projects. produce your guide as a markdown document within ``` tags.
+
+---
+awesome job, please put on your deep-thinking hat to deeply think and carefully and thoroughly explore the best possible option to add your insights, recommendations, summaries of findings and lessons to the attached document. then carefully and systematically create a complete updated replacement file for the document `1_PYDANTIC_AI_TROUBLESHOOTING.md`. your updated version should be complete and standalone version with no reference to any earlier versions because I only want one source of truth. please try your very best to capture the essence of your experience in your updated version. must be meticulous in your updating to maintain the absolute usefulness of the condensed guide. it is meant to be somewhat like a cheat sheet for similar software. thank you and good luck.
+
+---
+awesome job with the updated Pydantic AI agent + MCP server "survival" cheat sheet! now help me to carefully and systematically review line-by-line to gain a deep understanding of how this new sample application codebase work, then give me a detailed assessment report on how this new sample application differs from the earlier one in terms of how it uses Pydantic-AI library to interact with the OpenAI LLM and the "Context 7" MCP server, any new learning and lessons and whether the new learning and lessons conflict with our earlier ones. 
+
+Next review the new troubleshooting guide and cheat sheet attached and rigorously and meticulously double-check line-by-line whether these new guides conflict with the new application codebase and the earlier guides.
+
+Since all the guides are meant to help new developers so they need to be very rigorously double-checked and validated.
+
+---
+absolutely excellent analysis and assessment! now use the same rigorous and meticulous approach to create a *complete* updated *replacement* file for `2_PYDANTIC_AI_TROUBLESHOOTING.md` that incorporates your following recommedation. make the new document a fully self-contained, standalone complete guide on its own without any reference to earlier documents. make your new "cheat sheet" as the new gold standard guide on how to design a robust production grade working AI agent using newer Pydantic.AI library with OpenAI LLM and MCP server tool calling. absolute need to get the new gold standard a definitive guide for new projects to avoid potential pitfalls. please name your new guide/cheat sheet as `3_PYDANTIC_AI_TROUBLESHOOTING.md` to denote version 3. please try your very best and good luck! 
+
+---
+awesome job! now the application is working. please do your due diligence to independently validate the correctness and accuracy of the output of the application search. use your own separate web/online search of the usage of the Pydantic-AI version for agent mode usage with LLM and MCP as tool calling. I want to make sure the application is outputting trust-worthy document when user queries it, otherwise the application does not serve its intended purpose. Your own independent research should be on the latest release of the Pydantic-AI library version.
+
+---
+awesome job! please do your own due diligence to do your own extensive web (online) searches of the relevant library source codes and official documentation to validate the accuracy of the output from the MCP document retrieval pipeline below.
+

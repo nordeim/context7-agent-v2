@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Complete verification that Context7 MCP integration works end-to-end.
-*Fixed for pydantic-ai 0.4.2+ with deprecation warnings resolved*
+*Fixed for pydantic-ai 0.4.2 compatibility*
 """
 import asyncio
 import logging
@@ -23,13 +23,13 @@ async def verify_integration():
         
         # Create agent with correct API pattern
         agent = Agent(
-            "openai:kimi-k2-0711-preview",  # Critical: provider prefix
+            "openai:gpt-4o-mini",  # Critical: provider prefix
             mcp_servers=[mcp_server],
             system_prompt="You are a helpful assistant that uses Context7 to answer questions."
         )
         
         # Test query
-        query = "strictly official pydantic-ai agent documentation on MCP tool calling for pydantic-ai release 0.42"
+        query = "n8n json format"
         
         # Execute with correct lifecycle management
         async with agent.run_mcp_servers():
@@ -37,8 +37,7 @@ async def verify_integration():
             result = await agent.run(query)
             print("✅ Query executed successfully")
             print("📋 Result:")
-            # ✅ FIXED: Use .output instead of .data
-            print(result.output)
+            print(result.data)
             
     except Exception as e:
         print(f"❌ Error: {e}")

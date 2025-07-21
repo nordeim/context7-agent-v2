@@ -32,12 +32,6 @@ class Context7Agent:
             base_url=config.openai_base_url,
         )
 
-        # Model - using the exact format from working examples
-        self.model = OpenAIModel(
-            model_name=config.openai_model,  # This will be used directly
-            provider=self.provider,
-        )
-
         # Ensure system prompt is never empty
         system_prompt = config.rag_system_prompt or """
         You are a specialized AI research assistant named Context7.

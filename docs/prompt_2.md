@@ -72,3 +72,28 @@ You will apply the same rigorous and systematic methodology to analyze the provi
 ---
 You will conduct due diligence to perform the necessary research to validate your previous finding and then construct a complete, corrected, and standalone replacement for the troubleshooting guide.
 
+---
+please use the same rigorous and meticulous approach as you did earlier and a deep, systematic analysis of the 2nd working sample codebase attached here. You will carefully, systematically and methodically perform a comprehensive architectural and line-by-line review of the attached 2nd working codebase. Similarly as before, produce a detailed code assessment and validation report, structured to provide maximum clarity and insight.
+
+Planning Approach:
+
+**Phase 1: Architectural Analysis.** You will map out the high-level architecture of the application. This involves identifying the primary components (`cli`, `agent`, `config`, `history`), their responsibilities, and the flow of data and control between them. You will create a Mermaid diagram to visually represent these interactions.
+
+**Phase 2: Deep Code Review.** You will analyze each file line by line. For each component, You will:
+    *   Assess its specific role within the application.
+    *   Validate the use of external libraries (`pydantic-ai`, `rich`, `anyio`, `openai`) against their documentation and the specified versions.
+    *   Scrutinize the logic for correctness, robustness, and adherence to best practices (e.g., error handling, async operations, configuration management).
+    *   Pay special attention to the `agent.py` file, as it contains the core interaction between `pydantic-ai` and the `Context7 MCP` server, which you noted was a point of difficulty.
+
+**Phase 3: Synthesis and Reporting.** You will consolidate your findings into a single, comprehensive report. This document will be structured as a professional code review, starting with a high-level summary and then diving into the detailed analysis, complete with code snippets and the architectural diagram. You will ensure the report is thorough, well-organized, and exceeds the requested length to provide a truly deep and valuable analysis.
+
+This rigorous process will ensure that the final report is not merely a superficial check but a deep, insightful validation of the 2nd codebase and its adherence and compliance to the programming best practices and guidelines as established by the earlier troubleshooting guides and cheat-sheets. You will give your accurate assessment of the application's correctness and give a clear understanding of its architecture as well as the comparison of its design versus the first working codebase, highlighting any deviations or oddity, also highlighting its design and architectural principles and differences from the first codebase.
+
+Create the comprehensive report with at least 6000 words in markdown format within ``` tags. please use generous tables, diagrams for hierarchy, etc, and mermaid diagrams and code snippets as illustrations and as examples. remember to put on your deep-thinking hat to deeply and thoroughly explore how you will approach to re-imagine and structure your in-depth code review, analysis, validation and comparison report. your final report will serve as a handbook type of programming guide and lessons.
+
+---
+awesome job! please review the themes and history code files from the 2nd codebase attached. then base on your deep and insightful validation of the 2nd codebase's architecture, implementation, and design principles in comparison to the first codebase, create a complete replacement for the attached cheat-sheet guide to incorporate just the superior ideas from the 2nd codebase as mentioned in section 5 and 6 of your just concluded assessment report, making the final updated guide a complete best-in-class and best practices guide to design a similar agentic RAG pipeline using MCP tool to provide relevant authoritative document on a given topic, giving a design that reduces the chance of LLM hallucinations, prioritizing the accurateness of the output. the primary use case is to help software developers conveniently retrieve needed programming documents for the requested programming language, library or framework that are up-to-date and trust-worthy. please use the same rigorous and meticulous approach as before to create a definitive cheat-sheet type of programming guide that will help new developers adopt the best practices and to avoid potential pitfalls and deliver production quality code quicker and error free.
+
+---
+First conduct a comprehensive, in-depth and meticulous review of the code files in the attached two working codebases to gain a deep understanding of how each codebase functions. After gaining a deep understanding of both codebases, you will construct a new, definitive programming guide which amalgamates the superior architectural patterns and best practices from both codebases, as identified in your comprehensive reviews, to present a "best-of-both-worlds" blueprint for building a production-quality, authoritative RAG agent. You will create a complete, updated, and definitive guide. This document is architected to be a definitive, best-practices handbook. It synthesizes the most robust patterns from both codebases to guide developers in building an agent that prioritizes accuracy and minimizes hallucination, making it ideal for the specified use case of retrieving trustworthy programming documentation.
+
